@@ -36,8 +36,9 @@
     font-size: 1.5rem !important;
 }
 
-/* .swiper-slide {
+.swiper-slide {
     background: transparent;
     max-width: 240px;
+    border-radius: 16px;
 
-} */
+}

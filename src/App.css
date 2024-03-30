@@ -1,0 +1,33 @@
+ /* swipe card */
+ .swiper {
+    width: 100%;
+    height: 360px;
+    margin: auto auto;
+  } 
+
+  .append-buttons {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  
+  .append-buttons button {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+  }
+
+  /* Add these styles to your CSS file */
+.swiper-button-prev, .swiper-button-next, .swiper-pagination {
+    color: #9ca3af !important; /* This will make the arrows black */
+  }
+  
+  /* If you want to increase the size of the arrows, you can add */
+  .swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 1.5rem !important;
+  }

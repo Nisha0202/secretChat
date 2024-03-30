@@ -5,18 +5,19 @@ import { RiShareBoxLine } from "react-icons/ri";
 export default function Card() {
     return (
         <div>
-            <div className="card max-w-64 h-[360px] shadow-xl bg-card px-7 py-6">
-                <figure className="w-24 h-24 rounded-full mx-auto">
+            <div className="card w-60 h-[360px] shadow-xl bg-card px-7 py-6 border-[1px] border-myblack
+            hover:transform hover:bg-mygray ">
+                <figure className="w-24 h-24 rounded-full mx-auto border-[1px] border-myblack">
                     <img className='w-24 h-24 object-cover'
                         src="https://i.pinimg.com/736x/84/d7/09/84d7098cbdccbae7d254cdc7426fa39d.jpg" alt="avater" />
                 </figure>
                 <div className="card-body items-center text-center lato px-0 pb-0">
 
                     <div className="card-title w-full flex justify-between">
-                        <div className='tienne text-lg'>Hello</div>
+                        <div className='tienne text-base'>Hello</div>
                         {/* limit */}
                         <button className="w-16 btn btn-xs p-0 flex justify-between items-center gap-0 rounded-2xl border-0 bg-myblack lato">
-                            <div className="  h-full w-1/2 rounded-l-2xl p-1.5 text-mywhite ">8</div>
+                            <div className="h-full w-1/2 rounded-l-2xl p-1.5 text-mywhite lg:tooltip" data-tip="limit">8</div>
                             <div className="bg-mylight-gray h-full w-1/2 rounded-r-2xl p-1.5">9</div>
                         </button>
 

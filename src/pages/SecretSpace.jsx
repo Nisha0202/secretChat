@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react';
 import { Virtual, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import './Space.css'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -34,7 +35,6 @@ export default function SecretSpace() {
             modules={[Virtual, Navigation, Pagination]}
             onSwiper={setSwiperRef}
             centeredSlides={true}
-
             pagination={{
               type: 'fraction',
             }}
@@ -65,11 +65,12 @@ export default function SecretSpace() {
             ))}
           </Swiper>
 
+          {/*scroll to start or end */}
           <p className="append-buttons md:flex md:justify-between w-full hidden">
-            <button onClick={() => slideTo(1)} className="prepend-slide btn btn-sm w-16 bg-myblack">
+            <button onClick={() => slideTo(1)} className="prepend-slide btn btn-sm w-16 bg-myblack border-2 border-mygray text-mygray">
               start
             </button>
-            <button onClick={() => slideTo(500)} className="slide-500 btn btn-sm w-16 bg-myblack">
+            <button onClick={() => slideTo(500)} className="slide-500 btn btn-sm w-16 bg-myblack border-mygray text-mygray">
               end
             </button>
 

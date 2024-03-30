@@ -48,7 +48,7 @@ export default function Entry() {
         <Logo />
         <div className='flex flex-col gap-4 py-4 md:py-6'>
           <div className='md:text-3xl text-2xl font-bold lato'>{homeStrings.HomeHeader}</div>
-          <div className='md:text-base/loose text-sm lato-p font-light'>{homeStrings.HomeConsentDescription}</div>
+          <div className='md:text-base/loose text-sm lato-p '>{homeStrings.HomeConsentDescription}</div>
 
           {/* permission */}
           <div className='flex gap-2 items-start'>
@@ -65,7 +65,7 @@ export default function Entry() {
               <span>
                 {
                   !showAlert ? (
-                    <span id='consentDescription' className='text-xs flex items-center gap-2'>
+                    <span id='consentDescription' className='text-xs flex items-center gap-2 text-mygray'>
                       {homeStrings.ConsentError}
                     </span>
                   ) : (

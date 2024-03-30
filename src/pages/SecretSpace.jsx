@@ -38,25 +38,27 @@ export default function SecretSpace() {
           <Search />
           <Swiper
             onSwiper={setSwiperRef}
-            effect={'coverflow'}
             grabCursor={true}
-            centeredSlides={true}
+            initialSlide={0}
+            centeredSlides={false}
             loop={true}
             slidesPerView={'auto'}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 100,
-              modifier: 1.5,
-            }}
             navigation={true}
-            modules={[EffectCoverflow, Pagination, Navigation]}
+            modules={[Pagination, Navigation]}
             className="swiper_container"
             breakpoints={{
               // when window width is >= 640px
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20, // Set the desired space between slides
+              },
               640: {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
               },
               // when window width is >= 768px
               768: {
@@ -72,12 +74,20 @@ export default function SecretSpace() {
             ))}
           </Swiper>
 
+
           {/*scroll to start or end */}
           <p className="append-buttons md:flex md:justify-between w-full hidden">
-            <button onClick={() => slideTo(1)} className="prepend-slide btn btn-sm w-16 bg-myblack border-2 border-mygray text-mygray"> start </button>
-            <button onClick={() => slideTo(500)} className="slide-500 btn btn-sm w-16 bg-myblack border-mygray text-mygray">  end          </button>
-
+            <button onClick={() => slideTo(1)} className="prepend-slide btn btn-sm w-16 bg-myblack border-2 border-mygray text-mygray">first </button>
+            <button onClick={() => slideTo(90)} className="slide-500 btn btn-sm w-16 bg-myblack border-mygray text-mygray">last</button>
           </p>
+
+          {/* creat Chat room */}
+
+
+          <div className="lg:tooltip my-4" data-tip="Creat New Chat">
+            <button className="text-2xl text-mypink"> <h2 className='tienne text-sm  text-mypink'>Create Your Own Space</h2> </button>
+          </div>
+
         </div>
       </div>
     </>

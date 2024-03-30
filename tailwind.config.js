@@ -13,10 +13,11 @@ export default {
       'myred': '#C10A0A',
       'myblack': '#262626',
       'mygray': '#6b7280',
-      'myblue': '#2626F',
+      'myBlue': '#0000e5',
       'mylight-gray': '#9ca3af',
       'card': ' #36454F',
       'mydark-white': 'rgb(207, 207, 207)',
+      'mylight-black': '#232B2B',
 
     },
   },

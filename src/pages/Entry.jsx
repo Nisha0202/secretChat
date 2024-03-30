@@ -59,7 +59,7 @@ export default function Entry() {
             </div>
 
             <div className='flex flex-col gap-1'>
-              <span id='consentMessage' className='text-myblue text-sm lato'>
+              <span id='consentMessage' className='text-myBlue text-sm lato'>
                 <Link >{homeStrings.Agreement}</Link>
               </span>
               <span>

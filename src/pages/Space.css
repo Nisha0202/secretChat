@@ -39,6 +39,5 @@
 .swiper-slide {
     background: transparent;
     max-width: 240px;
-    border-radius: 16px;
-
+    margin-right: 1rem;
 }

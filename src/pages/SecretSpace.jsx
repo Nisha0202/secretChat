@@ -77,15 +77,16 @@ export default function SecretSpace() {
 
           {/*scroll to start or end */}
           <p className="append-buttons md:flex md:justify-between w-full hidden">
-            <button onClick={() => slideTo(1)} className="prepend-slide btn btn-sm w-16 bg-myblack border-2 border-mygray text-mygray">first </button>
-            <button onClick={() => slideTo(90)} className="slide-500 btn btn-sm w-16 bg-myblack border-mygray text-mygray">last</button>
+            <button onClick={() => slideTo(1)}
+              className="prepend-slide btn btn-sm w-16 bg-gray-light2 border-0  text-mygray">first </button>
+            <button onClick={() => slideTo(90)}
+              className="slide-500 btn btn-sm w-16 bg-gray-light2 border-0  text-mygray">last</button>
           </p>
 
-          {/* creat Chat room */}
-
-
+          {/* create Chat room */}
           <div className="lg:tooltip my-4" data-tip="Creat New Chat">
-            <button className="text-2xl text-mypink"> <h2 className='tienne text-sm  text-mypink'>Create Your Own Space</h2> </button>
+            <button className="text-2xl text-mypink"> <h2 className='tienne text-sm
+             text-mypink btn btn-sm btn-ghost hover:bg-mygray'>Create Your Own Space</h2> </button>
           </div>
 
         </div>

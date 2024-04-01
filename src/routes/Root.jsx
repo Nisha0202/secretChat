@@ -1,10 +1,9 @@
-// 
 
 import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Entry from '../pages/Entry';
 import SecretSpace from '../pages/SecretSpace';
-
+import { UserConsentContext } from '../UserConsentContext'; // Import the context
 import '../../src/index.css';
 import '../../src/App.css';
 
@@ -43,10 +42,14 @@ export default function Root() {
 
     return (
         <div id="detail">
-            <Routes>
+             <UserConsentContext.Provider value={{ userConsent, setuserConsent }}>
+                   <Routes>
                 <Route exact path="/" element={userConsent ? (<Navigate to='/space' />) : (< Entry />)} />
-                <Route exact path="/space" element={userConsent ? < SecretSpace /> : <Navigate to='/' />} />
+                {/* <Route exact path="/space" element={ < SecretSpace />} /> */}
+                 <Route exact path="/space" element={userConsent ? < SecretSpace /> : <Navigate to='/' />} /> 
             </Routes>
+             </UserConsentContext.Provider>
+         
         </div>
     );
 }

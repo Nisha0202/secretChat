@@ -14,11 +14,11 @@ export default function Card({data}) {
                 <div className="card-body items-center text-center lato px-0 pb-0">
 
                     <div className="w-full flex justify-between items-center">
-                        <div className='tienne text-base text-mywhite-two text-start'>{data.chatRoomName}</div>
+                        <div className='tienne text-base text-mywhite-two text-start'>{data.chatRoomName}</div> 
                         {/* limit */}
                         <button className="w-16 btn btn-xs p-0 flex justify-between items-center gap-0 rounded-2xl border-0 bg-mylight-black lato">
-                            <div className="h-full w-1/2 rounded-l-2xl p-1.5 lg:tooltip bg-mylight-gray" data-tip="limit">08</div>
-                            <div className=" h-full w-1/2 rounded-r-2xl p-1.5  text-mydark-white bg-mygray  ">09</div>
+                            <div className="h-full w-1/2 rounded-l-2xl p-1.5 lg:tooltip bg-mylight-gray" data-tip="limit">{data.currentMembers}</div>
+                            <div className=" h-full w-1/2 rounded-r-2xl p-1.5  text-mydark-white bg-mygray  ">{data.totalLimit}</div>
                         </button>
 
 
@@ -31,7 +31,7 @@ export default function Card({data}) {
 
                     <div className='flex justify-between items-center w-full card-actions mt-2'>
                         <div className='flex gap-2 items-center mb-1.5'>
-                           <button className='btn btn-xs rounded-full text-xs font-bold bg-mywhite-two border-0'>#Tags1</button>
+                           <button className='btn btn-xs rounded-full text-xs font-bold bg-mywhite-two border-0'>{data.category}</button>
                            {/* <button className='btn btn-xs rounded-full text-xs bg-mygray border-0'>#Tags2</button> */}
                         </div>
                         <div className="flex gap-2 ">

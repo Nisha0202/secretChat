@@ -22,7 +22,7 @@ export default function SecretSpace() {
    // State for chatroom data
    const [chatroomData, setChatroomData] = useState([]);
    console.log('hi');
-   useEffect(() => {
+   React.useEffect(() => {
     // Fetch chatroom data when component mounts
     fetch('chatroom.json')
       .then(response => response.json())

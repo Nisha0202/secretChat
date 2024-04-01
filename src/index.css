@@ -38,8 +38,6 @@
   .content-container {
     max-width: 1186px;
     margin: 0 auto; /* Center horizontally */
-    padding-top: 0rem;
-    padding-bottom: 0rem;
     height: 100%; /* Set height to screen height */
   }
 

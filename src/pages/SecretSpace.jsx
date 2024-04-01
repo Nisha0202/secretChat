@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
@@ -19,10 +19,27 @@ export default function SecretSpace() {
   // Swiper instance reference
   const [swiperRef, setSwiperRef] = useState(null);
 
-  // Slides array
-  const slides = Array.from({ length: 100 }).map(
-    (el, index) => <Card key={index} />
-  );
+   // State for chatroom data
+   const [chatroomData, setChatroomData] = useState([]);
+   console.log('hi');
+   useEffect(() => {
+    // Fetch chatroom data when component mounts
+    fetch('chatroom.json')
+      .then(response => response.json())
+      .then(data => {
+        // Set chatroom data
+        setChatroomData(data.chatRooms);
+        console.log(data.chatRooms);
+      })
+      .catch(error => {
+        console.error('Error fetching data: ', error);
+      })
+  }, []);
+
+
+// Slides array
+const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <Card key={index} data={data} />) : [];
+
 
   // Slide to a specific slide
   const slideTo = (index) => {
@@ -33,7 +50,7 @@ export default function SecretSpace() {
   return (
     <>
       <div className='fullscreen-container Lato py-16'>
-        <div className='content-container flex flex-col items-center md:px-8 px-4 lg:px-0'>
+        <div className='content-container flex flex-col items-center md:px-8 px-4 lg:px-8'>
           <Logo />
           <Search />
           <Swiper
@@ -41,8 +58,9 @@ export default function SecretSpace() {
             grabCursor={true}
             initialSlide={0}
             centeredSlides={false}
-            loop={true}
+            loop={false}
             slidesPerView={'auto'}
+
             navigation={true}
             modules={[Pagination, Navigation]}
             className="swiper_container"

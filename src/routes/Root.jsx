@@ -38,10 +38,8 @@ export default function Root() {
                     return true;
                 }
             }
-
         }
     );
-
 
     return (
         <div id="detail">

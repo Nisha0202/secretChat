@@ -18,6 +18,43 @@ export default function Entry() {
   //consent checker
   const [checked, setChecked] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
+
+  // const onChange = () => {
+  //   setChecked(!checked);
+  //   if (!checked) {
+  //     setShowAlert(false);
+  //   }
+  // };
+
+  // //consent confirmation button
+  // const handleSubmit = (e) => {
+  //   // Check if the checkbox is checked
+  //   if (!checked) {
+  //     // Show an error message or do nothing
+  //     e.preventDefault();
+  //     setShowAlert(true);
+  //   }
+  //   else {
+  //     let currentDate = new Date();
+
+  //     var dateString = currentDate.toLocaleString();
+  //     localStorage.setItem('userConsentDate', dateString);
+  //     console.log("handleClick");
+  //     navigate('/space');
+  //   }
+  // };
+
+
+  useEffect(() => {
+    if (checked) {
+      let currentDate = new Date();
+      var dateString = currentDate.toLocaleString();
+      localStorage.setItem('userConsentDate', dateString);
+      console.log("handleClick");
+      navigate('/space');
+    }
+  }, [checked]); // Add 'checked' as a dependency
+
   const onChange = () => {
     setChecked(!checked);
     if (!checked) {
@@ -25,27 +62,18 @@ export default function Entry() {
     }
   };
 
-  //consent confirmation button
+
   const handleSubmit = (e) => {
-    // Check if the checkbox is checked
     if (!checked) {
-      // Show an error message or do nothing
       e.preventDefault();
       setShowAlert(true);
     }
-    else {
-      let currentDate = new Date();
-
-      var dateString = currentDate.toLocaleString();
-      localStorage.setItem('userConsentDate', dateString);
-      console.log("handleClick");
-      navigate('/space');
-    }
   };
+
 
   return (
     <div className='fullscreen-container Lato'>
-      <div className='content-container flex flex-col justify-center'>
+      <div className='content-container flex flex-col justify-center md:px-8 px-4 lg:px-8'>
         <Logo />
         <div className='flex flex-col gap-4 py-4 md:py-6'>
           <div className='md:text-3xl text-2xl font-bold lato'>{homeStrings.HomeHeader}</div>

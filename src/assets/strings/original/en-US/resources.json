@@ -4,7 +4,11 @@
             "Agreement":"Agree to all terms",
             "ConsentError":"you must agree to the terms and conditions.",
             "HomeHeader":"Enjoy the freedom of communication!",
-            "HomeConsentDescription":"SecretChat is a place that lets you create online chat rooms to talk or text with people.You can invite anyone to join your chat room by sending them a link. The texts and links you send will be deleted as soon as everyone leaves the room. No one can access your chat history or see what you shared.",
+            "HomeConsentDescription":"SecretChat is a place that lets you create online chat rooms to talk or text with people. You can invite anyone to join your chat room by sending them a link. The texts and links you send will be deleted as soon as everyone leaves the room. No one can access your chat history or see what you shared.",
+            "HomeConsentDescriptionSmallScreen":"Your privacy is our priority. We take data protection seriously and adhere to strict privacy policies.",
+            
+            
+            
             "Title":"SecretChat"
         }
     }

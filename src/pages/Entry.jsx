@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Logo from '../components/Logo'
 import { GrLogin } from "react-icons/gr";
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 import { useStrings } from '../components/Assets';
 import AssetStrings from '../assets/strings/original/en-US/resources'
-
 import { FiAlertTriangle } from "react-icons/fi";
 
 export default function Entry() {
-
+  const navigate = useNavigate();
   //strings
   const resourceStrings = useStrings();   //some issue with render and fetching, need to implement a loader kind of thing
   console.log(resourceStrings);
@@ -38,7 +39,7 @@ export default function Entry() {
       var dateString = currentDate.toLocaleString();
       localStorage.setItem('userConsentDate', dateString);
       console.log("handleClick");
-      window.location.href = "/space";
+      navigate('/space');
     }
   };
 
@@ -84,10 +85,8 @@ export default function Entry() {
 
         {/* enter */}
         <div className='h-1/4 w-full grid place-items-center text-2xl text-myred'>
-          <button>
-            <Link to='/' className='login' disabled={!checked} onClick={handleSubmit}>
+          <button className='login' disabled={!checked} onClick={handleSubmit}>
               <GrLogin />
-            </Link>
           </button>
 
         </div>

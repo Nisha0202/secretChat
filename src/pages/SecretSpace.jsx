@@ -33,7 +33,7 @@ export default function SecretSpace() {
   return (
     <>
       <div className='fullscreen-container Lato py-16'>
-        <div className='content-container flex flex-col items-center'>
+        <div className='content-container flex flex-col items-center md:px-8 px-4 lg:px-0'>
           <Logo />
           <Search />
           <Swiper

@@ -1,8 +1,9 @@
  /* swipe card */
  .swiper {
     width: 100%;
-    max-height: 360px;
+    max-height: 400px;
     margin: auto auto;
+    background-color: transparent;
 }
 
 .append-buttons {
@@ -13,13 +14,11 @@
 .append-buttons button {
     display: inline-block;
     cursor: pointer;
-    /* border: 1px solid #007aff;
-    color: #007aff; */
     text-decoration: none;
     padding: 4px 10px;
     border-radius: 4px;
     margin: 0 10px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 /* Add these styles to your CSS file */
@@ -38,6 +37,9 @@
 
 .swiper-slide {
     background: transparent;
-    max-width: 240px;
-    margin-right: 1rem;
+    max-width: 225px;
+    border-radius: 16px;
+    border: 0px;
+    display: grid;
+    place-items: center;
 }

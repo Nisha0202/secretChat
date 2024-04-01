@@ -46,7 +46,7 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
     swiperRef.slideTo(index - 1, 0);
   };
 
-
+  console.log(swiperRef)
   return (
     <>
       <div className='fullscreen-container Lato py-16'>
@@ -56,27 +56,32 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
           <Swiper
             onSwiper={setSwiperRef}
             grabCursor={true}
-            initialSlide={0}
-            centeredSlides={false}
+            initialSlide={1}
             loop={false}
-            slidesPerView={'auto'}
-
+       
+            slidesPerView={'auto'} // 'auto' will size slides based on their content's width
+            centeredSlides={true} // Center the active slide
+            
+            
             navigation={true}
             modules={[Pagination, Navigation]}
             className="swiper_container"
             breakpoints={{
               // when window width is >= 640px
               320: {
-                slidesPerView: 1,
-                spaceBetween: 20, // Set the desired space between slides
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                centeredSlides: true,
+                spaceBetween: 40, // Set the desired space between slides
               },
               640: {
                 slidesPerView: 1,
-                spaceBetween: 30,
+                centeredSlides: true,
+                spaceBetween: 20,
               },
               768: {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                spaceBetween: 30,
               },
               // when window width is >= 768px
               768: {

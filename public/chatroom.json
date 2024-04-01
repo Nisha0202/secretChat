@@ -2,6 +2,7 @@
     "chatRooms": [
       {
         "id": 101,
+        "avater":"https://i.pinimg.com/236x/7d/0f/3e/7d0f3e302b89c29872e8551f8665b1b3.jpg",
         "chatRoomName": "Coding W",
         "totalLimit": 30,
         "currentMembers": 3,
@@ -11,6 +12,7 @@
       },
       {
         "id": 111,
+        "avater":"https://i.pinimg.com/236x/86/53/a7/8653a75869dffc6b1e8b87fa2c2b70f0.jpg",
         "chatRoomName": "Photogra", 
         "totalLimit": 35,
         "currentMembers": 7,
@@ -21,15 +23,17 @@
       },
       {
         "id": 112,
+        "avater":"https://i.pinimg.com/236x/1e/f8/7f/1ef87f9ce024bd9fdb318c9ff3925003.jpg",
         "chatRoomName": "Freelanc",
         "totalLimit": 50,
         "currentMembers": 15,
         "description": "Discuss freelancing opportunities, share experiences, and navigate the gig economy together.",
-        "category": "Career & Business",
+        "category": "Career",
         "private": true
       },
       {
         "id": 113,
+        "avater":"https://i.pinimg.com/564x/d8/5b/4f/d85b4fdd93c49a24e0faa1a21bc7b4e6.jpg",
         "chatRoomName": "Gardenin",
         "totalLimit": 25,
         "currentMembers": 9,
@@ -39,20 +43,22 @@
       },
       {
         "id": 114,
+        "avater":"https://i.pinimg.com/736x/cf/a9/ab/cfa9ab1badec2fe2e823010299707f66.jpg",
         "chatRoomName": "Book Clu",
         "totalLimit": 30,
         "currentMembers": 12,
         "description": "Discuss your favorite books, share reading recommendations, and explore literary themes.",
-        "category": "Arts & Literature",
+        "category": "Literature",
         "private": true
       },
       {
         "id": 115,
-        "chatRoomName": "Startup ",
+        "avater":"https://i.pinimg.com/736x/59/65/9b/59659b3d2b4015be7aa2c4dcf9cbf9c3.jpg",
+        "chatRoomName": "Startup",
         "totalLimit": 40,
         "currentMembers": 10,
         "description": "Connect with fellow startup founders, share business strategies, and discuss startup challenges.",
-        "category": "Career & Business",
+        "category": "Career",
         "private": false
       }
     ]

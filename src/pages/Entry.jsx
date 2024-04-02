@@ -4,10 +4,10 @@ import React, { useState, useEffect, useContext } from 'react';
 import Logo from '../components/Logo'
 import { GrLogin } from "react-icons/gr";
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-
+import { FiAlertCircle } from "react-icons/fi";
 import { useStrings } from '../components/Assets';
 import AssetStrings from '../assets/strings/original/en-US/resources'
-import { FiAlertTriangle } from "react-icons/fi";
+
 import { UserConsentContext } from '../UserConsentContext'; // Import the context
 
 
@@ -76,7 +76,7 @@ export default function Entry() {
                       </span>
                     ) : (
                       <span id='consentAlert' className='text-xs flex items-center gap-2 text-myred'>
-                        <FiAlertTriangle />
+                        <FiAlertCircle />
                         {homeStrings.ConsentError}
                       </span>
                     )

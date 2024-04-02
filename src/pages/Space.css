@@ -1,8 +1,10 @@
  /* swipe card */
  .swiper {
     width: 100%;
-    max-height: 400px;
-    margin: auto auto;
+    height: auto;
+
+    min-height: 360px;
+    margin: 2rem auto;
     background-color: transparent;
 }
 
@@ -37,9 +39,11 @@
 
 .swiper-slide {
     background: transparent;
-    max-width: 225px;
+    max-width: 230px;
+    height: auto;
+    display: grid;
+    place-items: end;
     border-radius: 16px;
     border: 0px;
-    display: grid;
-    place-items: center;
+
 }

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -21,7 +21,6 @@ export default function SecretSpace() {
 
    // State for chatroom data
    const [chatroomData, setChatroomData] = useState([]);
-   console.log('hi');
    React.useEffect(() => {
     // Fetch chatroom data when component mounts
     fetch('chatroom.json')
@@ -49,7 +48,7 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
   console.log(swiperRef)
   return (
     <>
-      <div className='fullscreen-container Lato py-16'>
+      <div className='fullscreen-container Lato py-12'>
         <div className='content-container flex flex-col items-center md:px-8 px-4 lg:px-8'>
           <Logo />
           <Search />
@@ -58,37 +57,13 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
             grabCursor={true}
             initialSlide={1}
             loop={false}
-       
             slidesPerView={'auto'} // 'auto' will size slides based on their content's width
-            centeredSlides={true} // Center the active slide
-            
+            centeredSlides={true} // Center the active slide 
             
             navigation={true}
             modules={[Pagination, Navigation]}
             className="swiper_container"
-            breakpoints={{
-              // when window width is >= 640px
-              320: {
-                slidesPerView: 2,
-                slidesPerGroup: 1,
-                centeredSlides: true,
-                spaceBetween: 40, // Set the desired space between slides
-              },
-              640: {
-                slidesPerView: 1,
-                centeredSlides: true,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-              // when window width is >= 768px
-              768: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-            }}
+        
           >
             {slides.map((slide, index) => (
               <SwiperSlide key={index}>
@@ -107,7 +82,7 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
           </p>
 
           {/* create Chat room */}
-          <div className="lg:tooltip my-4" data-tip="Creat New Chat">
+          <div className="lg:tooltip my-2" data-tip="Creat New Chat">
             <button className="text-2xl text-mypink"> <h2 className='tienne text-sm
              text-mypink btn btn-sm btn-ghost hover:bg-mygray'>Create Your Own Space</h2> </button>
           </div>

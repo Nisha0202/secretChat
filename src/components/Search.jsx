@@ -4,7 +4,7 @@ export default function Search() {
     return (
         <div>
             <div>
-                <div className="relative my-3 md:my-4 max-w-xl rounded-full shadow-sm text-mygray bg-gray-light2">
+                <div className="relative my-3 md:my-4 max-w-xl rounded-full shadow-sm text-mygray bg-gray-light2 px-4">
                     <input type="text" 
                     className="block max-w-xl rounded-full border-0 md:py-3 py-2.5 md:pl-6 pl-4 md:pr-56 pr-24 
                     focus:outline-none focus:ring-1  placeholder:text-mylight-gray bg-gray-light2"
@@ -15,6 +15,10 @@ export default function Search() {
                         </div>
                     </div>
                 </div>
+
+
+
+
             </div>
 
         </div>

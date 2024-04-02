@@ -5,7 +5,7 @@ import { RiShareForwardFill } from "react-icons/ri";
 export default function Card({ data }) {
     return (
         <div>
-            <div className="card w-48 md:w-56 h-[380px] md:h-[360px] shadow-xl shadow-myblack px-5  md:px-6 py-6 border-[1px] border-mylight-gray
+            <div className="card w-48 md:w-52 h-[340px] md:h-[340px] shadow-xl shadow-myblack px-2 md:px-4 py-4 border-[1px] border-mylight-gray
             hover:transform hover:bg-myblack ">
                 <figure className="w-24 h-24 rounded-full mx-auto border-[1px] border-myblack relative">
                     <img className='w-24 h-24 object-cover' src={data.avater} alt="avater" />

@@ -64,7 +64,7 @@ export default function Create() {
                             <div className='flex justify-between w-full gap-4'>
                                 <button
                                     className={`py-2 px-4 font-semibold rounded-md text-mywhite border-0 w-1/2 ${chatRoomName ? "bg-myred" : "bg-mygray"}`}
-                                    onClick={() => window.open('/', '_blank')}
+                                    onClick={() => window.open('/chats', '_blank')}
                                     disabled={!chatRoomName}>Create</button>
                                 <Link className="w-1/2" to='/space'> 
                                 <button className='w-full py-2 px-4 border-[1px] border-mypink font-semibold rounded-md text-mywhite'>Cancel</button></Link>

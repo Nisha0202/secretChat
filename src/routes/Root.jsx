@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Entry from '../pages/Entry';
@@ -7,6 +6,7 @@ import { UserConsentContext } from '../UserConsentContext'; // Import the contex
 import '../../src/index.css';
 import '../../src/App.css';
 import Create from '../pages/Create';
+import Chats from '../pages/Chats';
 
 function ConsentExpired(date) {
     // Get the current date
@@ -49,6 +49,7 @@ export default function Root() {
                 {/* <Route exact path="/space" element={ < SecretSpace />} /> */}
                  <Route exact path="/space" element={userConsent ? < SecretSpace /> : <Navigate to='/' />} />
                  <Route exact path="/createchat" element={<Create/>} />
+                 <Route exact path="/chats" element={<Chats/>} />
             </Routes>
              </UserConsentContext.Provider>
          

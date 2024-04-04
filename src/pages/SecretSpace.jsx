@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
+import {  Pagination, Navigation } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,6 +13,7 @@ import Logo from '../components/Logo';
 import Search from '../components/Search';
 import Card from '../components/Card';
 import './Space.css';
+import { Link } from 'react-router-dom';
 
 export default function SecretSpace() {
 
@@ -48,7 +49,7 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
   console.log(swiperRef)
   return (
     <>
-      <div className='fullscreen-container Lato py-12'>
+      <div className='fullscreen-container Lato md:py-12 py-7'>
         <div className='content-container flex flex-col items-center md:px-8 px-4 lg:px-8'>
           <Logo />
           <Search />
@@ -59,7 +60,6 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
             loop={false}
             slidesPerView={'auto'} // 'auto' will size slides based on their content's width
             centeredSlides={true} // Center the active slide 
-            
             navigation={true}
             modules={[Pagination, Navigation]}
             className="swiper_container"
@@ -83,8 +83,8 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
 
           {/* create Chat room */}
           <div className="lg:tooltip my-2" data-tip="Creat New Chat">
-            <button className="text-2xl text-mypink"> <h2 className='tienne text-sm
-             text-mypink btn btn-sm btn-ghost hover:bg-mygray'>Create Your Own Space</h2> </button>
+          <Link to={'/createchat'} className='latp text-sm
+             text-mypink btn btn-sm btn-ghost hover:bg-mygray'>Create Your Own Space</Link>
           </div>
 
         </div>

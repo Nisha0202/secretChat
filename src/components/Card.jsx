@@ -1,6 +1,7 @@
 import React from 'react'
 import { FiPlusCircle } from "react-icons/fi";
 import { RiShareForwardFill } from "react-icons/ri";
+import { GoPlus } from "react-icons/go";
 
 export default function Card({ data }) {
     return (
@@ -11,17 +12,14 @@ export default function Card({ data }) {
                     <img className='w-24 h-24 object-cover' src={data.avater} alt="avater" />
                     <div className="absolute inset-0 bg-myblack opacity-10 rounded-full"></div>
                 </figure>
-
                 <div className="card-body items-center text-center lato px-0 pb-0">
-
                     <div className="w-full flex justify-between items-center">
                         <div className='tienne text-base text-mywhite-two text-start'>{data.chatRoomName}</div>
                         {/* limit */}
-                        <button className="w-16 btn btn-xs p-0 flex justify-between items-center gap-0 rounded-2xl border-0 bg-mylight-black lato">
-                            <div className="h-full w-1/2 rounded-l-2xl p-1.5 lg:tooltip bg-mylight-gray" data-tip="limit">{data.currentMembers}</div>
-                            <div className=" h-full w-1/2 rounded-r-2xl p-1.5  text-mydark-white bg-mygray  ">{data.totalLimit}</div>
+                        <button className="w-[52px] btn btn-xs p-0 flex justify-between items-center gap-0 rounded-xl border-0 bg-mylight-black lato">
+                            <div className=" w-1/2 rounded-l-xl p-1 lg:tooltip bg-mylight-gray" data-tip="limit">{data.currentMembers}</div>
+                            <div className="w-1/2 rounded-r-xl p-1  text-mydark-white bg-mygray  ">{data.totalLimit}</div>
                         </button>
-
 
                     </div>
 

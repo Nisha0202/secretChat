@@ -2,7 +2,6 @@
  .swiper {
     width: 100%;
     height: auto;
-
     min-height: 360px;
     margin: 2rem auto;
     background-color: transparent;
@@ -39,7 +38,7 @@
 
 .swiper-slide {
     background: transparent;
-    max-width: 230px;
+    max-width: 220px;
     height: auto;
     display: grid;
     place-items: end;

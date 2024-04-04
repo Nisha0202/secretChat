@@ -6,6 +6,7 @@ import SecretSpace from '../pages/SecretSpace';
 import { UserConsentContext } from '../UserConsentContext'; // Import the context
 import '../../src/index.css';
 import '../../src/App.css';
+import Create from '../pages/Create';
 
 function ConsentExpired(date) {
     // Get the current date
@@ -46,7 +47,8 @@ export default function Root() {
                    <Routes>
                 <Route exact path="/" element={userConsent ? (<Navigate to='/space' />) : (< Entry />)} />
                 {/* <Route exact path="/space" element={ < SecretSpace />} /> */}
-                 <Route exact path="/space" element={userConsent ? < SecretSpace /> : <Navigate to='/' />} /> 
+                 <Route exact path="/space" element={userConsent ? < SecretSpace /> : <Navigate to='/' />} />
+                 <Route exact path="/createchat" element={<Create/>} />
             </Routes>
              </UserConsentContext.Provider>
          

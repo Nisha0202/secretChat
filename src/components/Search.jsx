@@ -20,7 +20,7 @@ export default function Search() {
             )}
                     <input type="text"
                 className="block w-full z-20 rounded-full border-0 md:py-3 py-2.5 md:pl-10 pl-8 md:pr-16 pr-10 
-                focus:outline-none focus:ring-1 text-myblack bg-gray-light2"
+                focus:outline-none focus:ring-1 text-mylight-gray bg-gray-light2"
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
             />

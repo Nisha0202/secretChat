@@ -17,7 +17,7 @@ export default function Card({ data }) {
                     <div className="w-full flex justify-between items-center">
                         <div className='tienne text-base text-mywhite-two text-start'>{data.chatRoomName}</div>
                         {/* limit */}
-                        <button className="w-[52px] btn btn-xs p-0 flex justify-between items-center gap-0 rounded-xl border-0 bg-mylight-black lato">
+                        <button className="w-[52px] btn btn-xs hover:bg-neutral p-0 flex justify-between items-center gap-0 rounded-xl border-0 bg-mylight-black lato">
                             <div className=" w-1/2 rounded-l-xl p-1 lg:tooltip bg-mylight-gray" data-tip="limit">{data.currentMembers}</div>
                             <div className="w-1/2 rounded-r-xl p-1  text-mydark-white bg-mygray  ">{data.totalLimit}</div>
                         </button>

@@ -50,7 +50,7 @@ export default function ChatSection() {
                         <div className="chat-header mb-1 text-mydark-white">Arshad
                             <time className="text-xs opacity-50 ml-2">{new Date().toLocaleTimeString()}</time>
                         </div>
-                        <div className="chat-bubble text-sm p-2 bg-gray rounded-md text-right">
+                        <div className="chat-bubble  text-sm p-2 bg-gray rounded-md text-right">
                             {message.message_text}
                         </div>
                         <div className="chat-footer text-xs opacity-50">
@@ -62,7 +62,7 @@ export default function ChatSection() {
                 {/* chat bubble */}
                 {messages.map((message, index) => (
                     <div className='chat chat-end' key={index}>
-                        <div className="chat-header mb-1 text-mydark-white">Anakin
+                        <div className="chat-header mb-1 text-mylight-gray">Anakin
                             <time className="text-xs opacity-50 ml-2">{new Date().toLocaleTimeString()}</time>
                         </div>
                         <div className="chat-bubble text-sm p-2 bg-gray rounded-md text-right">

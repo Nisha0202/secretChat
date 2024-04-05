@@ -13,7 +13,7 @@ export default function Chats() {
   return (
     <div className=''>
          <div className='fullscreen-container relative'>
-                <div className='content-container flex flex-col lg:flex-row bg-[#36454F] w-full h-full'>
+                <div className='content-container flex flex-col lg:flex-row bg-gray-light2 w-full h-full'>
                     <div className='lg:w-1/3 w-full h-20 lg:h-full hero-overlay opacity-70  ads'>
                         <img className='h-full w-full object-cover' src="https://i.pinimg.com/736x/72/8d/45/728d458072c4bbd347d9f9d2f331e67c.jpg" alt="" />
                     </div>

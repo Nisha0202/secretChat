@@ -39,7 +39,7 @@ export default function Username({ onDone }) {
 
                         </div>
                         <button
-                            className={`w-full rounded-md py-2 text-sm px-4 font-semibold text-mywhite border-0 ${userName ? "bg-myred" : "bg-mygray"
+                            className={`w-full rounded-md py-2 text-sm px-4 font-semibold text-mywhite border-0 ${userName ? "bg-myred" : "bg-gray-light2"
                                 }`}
                             onClick={handleClick}
                             disabled={!userName}

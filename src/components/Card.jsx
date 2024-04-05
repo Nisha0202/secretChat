@@ -1,7 +1,8 @@
 import React from 'react'
 import { FiPlusCircle } from "react-icons/fi";
 import { RiShareForwardFill } from "react-icons/ri";
-import { GoPlus } from "react-icons/go";
+import { Link } from 'react-router-dom';
+
 
 export default function Card({ data }) {
     return (
@@ -35,7 +36,7 @@ export default function Card({ data }) {
                         </div>
                         <div className="flex gap-2 ">
                             <div className="lg:tooltip" data-tip="Jon Chat">
-                                <button className="text-2xl text-myred"><FiPlusCircle /></button>
+                                <button onClick={() => window.open('/chats', '_blank')} className="text-2xl text-myred"><FiPlusCircle /></button>
                             </div>
                             <div className="lg:tooltip" data-tip="Share Link">
                                 <button className="text-2xl text-mypink"><RiShareForwardFill /></button>

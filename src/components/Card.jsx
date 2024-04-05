@@ -28,7 +28,6 @@ export default function Card({ data }) {
                         style={{ wordSpacing: '5px' }}>
                         {data.description}</p>
 
-
                     <div className='flex justify-between items-center w-full card-actions mt-2'>
                         <div className='flex gap-2 items-center mb-1.5'>
                             <button className='btn btn-xs rounded-full text-xs font-bold bg-mywhite-two border-0'>{data.category}</button>

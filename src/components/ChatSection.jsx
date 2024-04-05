@@ -36,19 +36,21 @@ export default function ChatSection() {
 
     return (
         <div className="flex flex-col h-full lato">
-            <nav className="bg-blue-500 p-4 text-white lato border-b-[1px] border-myblack flex justify-between">
-                <div>Chat Room Name</div>
-                <div><RxDotsHorizontal className='text-myBlue' size={24} /></div>
+            <nav className="bg-blue-500 p-4 text-mydark-white lato border-b-[1px] border-myblack flex justify-between">
+                <div className='text-sm md:text-base'>Chat Room Name</div>
+                <div className='btn btn-circle btn-sm btn-ghost'>
+                    <RxDotsHorizontal className='text-mypink' size={18} />
+                    </div>
             </nav>
             <div className="flex-grow overflow-auto p-4 space-y-2">
 
                 {/* reply bubble */}
                 {reply.slice(0, currentIndex).map((message, index) => (
                     <div className='chat chat-start' key={index}>
-                        <div className="chat-header mb-1">Arshad
+                        <div className="chat-header mb-1 text-mydark-white">Arshad
                             <time className="text-xs opacity-50 ml-2">{new Date().toLocaleTimeString()}</time>
                         </div>
-                        <div className="chat-bubble p-2 bg-gray rounded-md text-right">
+                        <div className="chat-bubble text-sm p-2 bg-gray rounded-md text-right">
                             {message.message_text}
                         </div>
                         <div className="chat-footer text-xs opacity-50">
@@ -60,10 +62,10 @@ export default function ChatSection() {
                 {/* chat bubble */}
                 {messages.map((message, index) => (
                     <div className='chat chat-end' key={index}>
-                        <div className="chat-header mb-1">Anakin
+                        <div className="chat-header mb-1 text-mydark-white">Anakin
                             <time className="text-xs opacity-50 ml-2">{new Date().toLocaleTimeString()}</time>
                         </div>
-                        <div className="chat-bubble p-2 bg-gray rounded-md text-right">
+                        <div className="chat-bubble text-sm p-2 bg-gray rounded-md text-right">
                             {message}
                         </div>
                         <div className="chat-footer text-xs opacity-50">

@@ -1,8 +1,15 @@
 import React from 'react'
+import { useState } from 'react';
 import ChatSection from '../components/ChatSection'
 import Username from '../components/Username'
 
 export default function Chats() {
+  const [isUsernameVisible, setIsUsernameVisible] = useState(true);
+
+  const handleUsernameDone = () => {
+      setIsUsernameVisible(false);
+  }
+
  
   return (
     <div className=''>
@@ -14,9 +21,11 @@ export default function Chats() {
                     </div>
                 </div>
 
-                <div className='absolute z-20 inset-0'>
-                  <Username/>
-                </div>
+                {isUsernameVisible && 
+                    <div className='absolute z-20 inset-0'>
+                        <Username onDone={handleUsernameDone}/>
+                    </div>
+                }
 
                 </div>
     </div>

@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 export default function Create() {
     const [chatRoomName, setChatRoomName] = useState('');
     const fileInputRef = useRef();
+    const [categoryLength, setCategoryLength] = useState(0);
+    const [chatRoomNameLength, setChatRoomNameLength] = useState(0);
+    const [descriptionLength, setDescriptionLength] = useState(0);
 
     const handleFileInputClick = () => {
         fileInputRef.current.click();
@@ -17,7 +20,7 @@ export default function Create() {
         <div>
             <div className='fullscreen-container'>
                 <div className='content-container grid place-items-center'>
-                    <div className="card max-w-96 p-6 border-[1px] border-mygray shadow-xl flex=col items-center py-10 m-1">
+                    <div className="card max-w-96 md:p-6 p-4 border-[1px] border-mygray shadow-xl flex=col items-center py-10 m-1">
                         <figure className="w-16 h-16 mb-6 rounded-full bg-mywhite relative">
                             <div className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center cursor-pointer" onClick={handleFileInputClick}>
                                 <GoPlus className='text-myBlue' size={24} />
@@ -28,33 +31,41 @@ export default function Create() {
                         <div className="flex flex-col text-center gap-4">
                             <div className='flex gap-4'>
                                 <div className="flex flex-col items-start gap-2">
-                                    <span className="label-text text-mygray text-sm">Chat Room Name</span>
+                                    <span className="label-text text-mylight-gray text-sm  ">Chat Room Name</span>
                                     <input type="text" placeholder=""
-                                        onChange={e => setChatRoomName(e.target.value)}
+                                         onChange={e => {
+                                            setChatRoomName(e.target.value);
+                                            setChatRoomNameLength(e.target.value.length);
+                                        }}
                                         className="input input-sm text-myblack input-bordered w-full max-w-xs" />
+                                             <span className='text-xs text-mygray'>{chatRoomNameLength}/8 characters</span>
                                 </div>
                                 <div className="flex flex-col items-start gap-2">
-                                    <span className="label-text text-mygray text-sm">Limit</span>
+                                    <span className="label-text text-mylight-gray text-sm ">Limit</span>
                                     <input placeholder="2" type="number" name="limit" min="2" max="10" defaultValue={2}
                                         className="input input-sm text-myblack input-bordered w-full max-w-xs" />
                                 </div>
                             </div>
                             <div className='flex gap-4'>
                                 <div className="flex flex-col items-start gap-2 w-full">
-                                    <span className="label-text text-mygray text-sm">Description</span>
+                                    <span className="label-text text-mylight-gray text-sm  ">Description</span>
                                     <textarea placeholder=""
+                                    onChange={e => setDescriptionLength(e.target.value.length)}
                                         className="textarea w-full text-myblack textarea-bordered textarea-sm" >
                                     </textarea>
+                                    <span className='text-xs text-mygray'>{descriptionLength}/300 characters</span>
                                 </div>
                             </div>
                             <div className='flex gap-4 justify-between'>
                                 <div className="flex flex-col items-start gap-2">
-                                    <span className="label-text text-mygray text-sm">Category</span>
+                                    <span className="label-text text-mylight-gray text-sm ">Category</span>
                                     <input type="text" placeholder=""
+                                     onChange={e => setCategoryLength(e.target.value.length)}
                                         className="input input-sm text-myblack input-bordered w-full max-w-xs" />
+                                         <span className='text-xs text-mygray'>{categoryLength}/7 characters</span>
                                 </div>
                                 <div className="flex flex-col items-start gap-2">
-                                    <span className="label-text text-mygray text-sm">Public</span>
+                                    <span className="label-text text-sm text-mylight-gray">Public</span>
                                     <div className='py-1'>
                                         <input type="checkbox" className="toggle border-myblack text-mypink toggle-md" />
                                     </div>

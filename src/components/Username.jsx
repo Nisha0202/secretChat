@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { FiAlertCircle } from "react-icons/fi";
 
-export default function Username({ onDone }) {
+export default function Username({onDone}) {
 
 
     const [isVisible, setIsVisible] = useState(true);
@@ -10,7 +10,7 @@ export default function Username({ onDone }) {
     const [showAlert, setShowAlert] = useState(false);
     const handleClick = () => {
         if (!userName) {
-            // alert('Please set an username before proceeding.');
+           
             setShowAlert(true);
         }else{
             setIsVisible(false);
@@ -24,11 +24,6 @@ export default function Username({ onDone }) {
         setUserName(value);
     }
 
-    const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            handleClick();
-        }
-    }
 
     return (
         isVisible && (
@@ -37,16 +32,16 @@ export default function Username({ onDone }) {
             border-[1px] border-mylight-gray gap-2'>
 
                 <div className="form-control w-full flex flex-col gap-2">
-                    <span className="label-text text-mylight-black text-sm">Set an Username</span>
+                    <span className="label-text text-mylight-black text-sm ">Set an Username</span>
                     <input type="text" placeholder="" value={userName}
                         onChange={e => handleChange(e)}
-                        onKeyPress={e => handleKeyPress(e)}
+                       
                         className="input input-sm text-myblack input-bordered w-full max-w-xs" />
 
                 </div>
              
                 <button
-                    className={`w-full bg-myred rounded-md py-2 text-sm px-4 font-semibold text-mywhite border-0 ${userName ? "enabled" : "disabled"}`}
+                    className={`w-full bg-myred rounded-md py-2 text-sm px-4 font-semibold text-mywhite border-0 ${userName ?  "bg-myred" : "bg-mygray"}`}
            
                     onClick={handleClick}
                     disabled={!userName}

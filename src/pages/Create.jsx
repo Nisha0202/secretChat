@@ -42,13 +42,13 @@ export default function Create() {
                                             setChatRoomName(e.target.value);
                                             setChatRoomNameLength(e.target.value.length);
                                         }}
-                                        className="input input-sm text-myblack input-bordered w-full max-w-xs" />
+                                        className="input input-sm text-myblack  input-bordered w-full max-w-xs" />
                                     <span className='text-xs text-mygray'>{chatRoomNameLength}/{maxChatNameLength} characters</span>
                                 </div>
                                 <div className="flex flex-col items-start gap-2">
                                     <span className="label-text text-mylight-gray text-sm ">Limit</span>
                                     <input placeholder="2" type="number" name="limit" min="2" max="10" defaultValue={2}
-                                        className="input input-sm text-myblack input-bordered w-full max-w-xs" />
+                                        className="input input-sm text-myblack input-bordered w-full max-w-xs  " />
                                 </div>
                             </div>
                             <div className='flex gap-4'>

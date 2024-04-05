@@ -40,7 +40,7 @@ export default function ChatSection() {
                 <div className='text-sm md:text-base'>Chat Room Name</div>
                 <div className='btn btn-circle btn-sm btn-ghost'>
                     <RxDotsHorizontal className='text-mypink' size={18} />
-                    </div>
+                </div>
             </nav>
             <div className="flex-grow overflow-auto p-4 space-y-2">
 
@@ -65,11 +65,11 @@ export default function ChatSection() {
                         <div className="chat-header mb-1 text-mylight-gray">Anakin
                             <time className="text-xs opacity-50 ml-2">{new Date().toLocaleTimeString()}</time>
                         </div>
-                        <div className="chat-bubble text-sm p-2 bg-gray rounded-md text-right">
+                        <div className="chat-bubble break-words text-sm p-2 bg-gray rounded-md text-right">
                             {message}
                         </div>
                         <div className="chat-footer text-xs opacity-50">
-                           Seen at {new Date().toLocaleTimeString()}
+                            Seen at {new Date().toLocaleTimeString()}
                         </div>
                     </div>
                 ))}
@@ -80,10 +80,10 @@ export default function ChatSection() {
             <div className="p-4 bg-gray-200 space-x-2 border-t-[1px] border-myblack">
                 <form action="" className='w-full flex gap-4 items-center'>
                     <input
-                        type="text"
+                        type="textarea"
                         value={input}
                         onChange={e => setInput(e.target.value)}
-                        className=" text-mygray flex-grow rounded-md border p-2" />
+                        className="text-mydark-white flex-grow rounded-md border p-2 h-16 overflow-y-scroll bg-transparent focus:outline-none focus:ring-0" />
                     <button
                         type='submit'
                         onClick={handleSend}
@@ -91,6 +91,7 @@ export default function ChatSection() {
                         Send
                     </button>
                 </form>
+
 
             </div>
         </div >

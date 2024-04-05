@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState, useRef } from 'react';
 import { RxDotsHorizontal } from "react-icons/rx";
+
 export default function ChatSection() {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState('');
+    const messagesEndRef = useRef(null);
 
     const handleSend = (e) => {
         e.preventDefault();
@@ -29,7 +30,9 @@ export default function ChatSection() {
         }
     }, [currentIndex, reply]);
 
-
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [messages]);
 
     return (
         <div className="flex flex-col h-full lato">
@@ -55,18 +58,20 @@ export default function ChatSection() {
                 ))}
 
                 {/* chat bubble */}
-                {messages.map((message, index) => (<div className='chat chat-end'>
-
-                    <div className="chat-header mb-1">Anakin
-                        <time className="text-xs opacity-50 ml-2">{new Date().toLocaleTimeString()}</time>
+                {messages.map((message, index) => (
+                    <div className='chat chat-end' key={index}>
+                        <div className="chat-header mb-1">Anakin
+                            <time className="text-xs opacity-50 ml-2">{new Date().toLocaleTimeString()}</time>
+                        </div>
+                        <div className="chat-bubble p-2 bg-gray rounded-md text-right">
+                            {message}
+                        </div>
+                        <div className="chat-footer text-xs opacity-50">
+                            {new Date().toLocaleTimeString()}
+                        </div>
                     </div>
-                    <div key={index} className=" chat-bubble p-2 bg-gray rounded-md text-right">
-                        {message}
-                    </div>
-                    <div className="chat-footer opacity-50">
-                    {new Date().toLocaleTimeString()}
-                    </div></div>
                 ))}
+                <div ref={messagesEndRef} />
 
             </div >
 
@@ -89,4 +94,3 @@ export default function ChatSection() {
         </div >
     );
 }
-

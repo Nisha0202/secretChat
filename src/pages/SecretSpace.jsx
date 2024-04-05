@@ -45,6 +45,8 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
     swiperRef.slideTo(index - 1, 0);
   };
 
+  //viewport
+  const isMobile = window.innerWidth <= 768;
   // console.log(swiperRef)
   return (
     <>
@@ -55,7 +57,7 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
           <Swiper
             onSwiper={setSwiperRef}
             grabCursor={true}
-            initialSlide={1}
+            initialSlide={isMobile ? 0 : 1}
             loop={false}
             slidesPerView={'auto'} // 'auto' will size slides based on their content's width
             centeredSlides={true} // Center the active slide 

@@ -67,7 +67,7 @@ export default function ChatSection() {
                             {message}
                         </div>
                         <div className="chat-footer text-xs opacity-50">
-                            {new Date().toLocaleTimeString()}
+                           Seen at {new Date().toLocaleTimeString()}
                         </div>
                     </div>
                 ))}

@@ -28,20 +28,20 @@ export default function Create() {
                         <div className="flex flex-col text-center gap-4">
                             <div className='flex gap-4'>
                                 <div className="flex flex-col items-start gap-2">
-                                    <span className="label-text text-mygray text-base">Chat Room Name</span>
+                                    <span className="label-text text-mygray text-sm">Chat Room Name</span>
                                     <input type="text" placeholder=""
                                         onChange={e => setChatRoomName(e.target.value)}
                                         className="input input-sm text-myblack input-bordered w-full max-w-xs" />
                                 </div>
                                 <div className="flex flex-col items-start gap-2">
-                                    <span className="label-text text-mygray text-base">Limit</span>
+                                    <span className="label-text text-mygray text-sm">Limit</span>
                                     <input placeholder="2" type="number" name="limit" min="2" max="10" defaultValue={2}
                                         className="input input-sm text-myblack input-bordered w-full max-w-xs" />
                                 </div>
                             </div>
                             <div className='flex gap-4'>
                                 <div className="flex flex-col items-start gap-2 w-full">
-                                    <span className="label-text text-mygray text-base">Description</span>
+                                    <span className="label-text text-mygray text-sm">Description</span>
                                     <textarea placeholder=""
                                         className="textarea w-full text-myblack textarea-bordered textarea-sm" >
                                     </textarea>
@@ -49,12 +49,12 @@ export default function Create() {
                             </div>
                             <div className='flex gap-4 justify-between'>
                                 <div className="flex flex-col items-start gap-2">
-                                    <span className="label-text text-mygray text-base">Category</span>
+                                    <span className="label-text text-mygray text-sm">Category</span>
                                     <input type="text" placeholder=""
                                         className="input input-sm text-myblack input-bordered w-full max-w-xs" />
                                 </div>
                                 <div className="flex flex-col items-start gap-2">
-                                    <span className="label-text text-mygray text-base">Public</span>
+                                    <span className="label-text text-mygray text-sm">Public</span>
                                     <div className='py-1'>
                                         <input type="checkbox" className="toggle border-myblack text-mypink toggle-md" />
                                     </div>
@@ -62,11 +62,11 @@ export default function Create() {
                             </div>
                             <div className='flex justify-between w-full gap-4'>
                                 <button
-                                    className={`py-2 px-4 font-semibold rounded-md text-mywhite border-0 w-1/2 ${chatRoomName ? "bg-myred" : "bg-mygray"}`}
+                                    className={` py-2 text-sm px-4 font-semibold rounded-md text-mywhite border-0 w-1/2 ${chatRoomName ? "bg-myred" : "bg-mygray"}`}
                                     onClick={() => window.open('/chats', '_blank')}
                                     disabled={!chatRoomName}>Create</button>
                                 <Link className="w-1/2" to='/space'>
-                                    <button className='w-full py-2 px-4 border-[1px] border-mypink font-semibold rounded-md text-mywhite'>Cancel</button></Link>
+                                    <button className='w-full  py-2 text-sm px-4 border-[1px] border-mypink font-semibold rounded-md text-mywhite'>Cancel</button></Link>
                             </div>
                         </div>
                     </div>

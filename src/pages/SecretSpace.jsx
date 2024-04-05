@@ -1,7 +1,8 @@
-import React, { useRef, useState} from 'react';
+import React, { useState, useEffect } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {  Pagination, Navigation } from 'swiper/modules';
-
+import { Link } from 'react-router-dom';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -13,7 +14,6 @@ import Logo from '../components/Logo';
 import Search from '../components/Search';
 import Card from '../components/Card';
 import './Space.css';
-import { Link } from 'react-router-dom';
 
 export default function SecretSpace() {
 
@@ -22,7 +22,7 @@ export default function SecretSpace() {
 
    // State for chatroom data
    const [chatroomData, setChatroomData] = useState([]);
-   React.useEffect(() => {
+   useEffect(() => {
     // Fetch chatroom data when component mounts
     fetch('chatroom.json')
       .then(response => response.json())
@@ -40,13 +40,12 @@ export default function SecretSpace() {
 // Slides array
 const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <Card key={index} data={data} />) : [];
 
-
   // Slide to a specific slide
   const slideTo = (index) => {
     swiperRef.slideTo(index - 1, 0);
   };
 
-  console.log(swiperRef)
+  // console.log(swiperRef)
   return (
     <>
       <div className='fullscreen-container Lato md:py-12 py-7'>
@@ -62,9 +61,7 @@ const slides = Array.isArray(chatroomData) ? chatroomData.map((data, index) => <
             centeredSlides={true} // Center the active slide 
             navigation={true}
             modules={[Pagination, Navigation]}
-            className="swiper_container"
-        
-          >
+            className="swiper_container" >
             {slides.map((slide, index) => (
               <SwiperSlide key={index}>
                 {slide}
